@@ -1,2 +1,11 @@
 name: A workflow for my hello World file
 on: push
+jobs:
+  build:
+    name: Hello world action
+    runs-on: ubantu-;atest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: ./action-a
+        with:
+          Myname: "Mona"
